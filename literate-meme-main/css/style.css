@@ -34,6 +34,7 @@ div {
     text-align: center;
     align-content: center;
     justify-items: center;
+    padding: 20px;
 }
 
 .options-container a {
