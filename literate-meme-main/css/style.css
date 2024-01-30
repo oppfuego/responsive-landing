@@ -4,27 +4,33 @@ body {
     box-sizing: border-box;
 }
 
-.web-header {
-    border-radius: 0;
-    background-color: darkred;
-    height: 60px;
-    width: 100%;
+.main {
     display: flex;
     justify-content: space-between;
-}
-
-.web-footer {
-    border-radius: 0;
-    background-color: darkred;
-    height: 150px;
-    width: 100%;
-    bottom: 0;
-    position: absolute;
 }
 
 div {
     display: flex;
 }
+
+ul {
+    list-style: none;
+}
+
+.web-header {
+    border-radius: 0;
+    background-color: lightgray;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: black 0 2px 10px;
+}
+
 
 .options-container {
     display: flex;
@@ -34,17 +40,21 @@ div {
     text-align: center;
     align-content: center;
     justify-items: center;
+
 }
 
 .options-container a {
     text-decoration: none;
-    font-family: Arial, sans-serif;
-    color: #ffffff;
+    font-family: Verdana, sans-serif;
+    color: black;
     font-size: 1.2rem;
     text-align: center;
     display: block;
     transition: 0.3s ease;
     border-radius: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    white-space: nowrap; /* додано властивість, щоб запобігти перенесенню тексту на новий рядок */
 }
 
 .options-container a p{
@@ -59,10 +69,17 @@ div {
 }
 
 .logo {
+    position: relative;
     text-transform: uppercase;
-    color: white;
     font-size: 1.5rem;
     margin: 12px 0 5px 12px;
+    color: black;
+    transition: .5s;
+    font-family: Verdana, sans-serif;
+}
+
+.logo:hover{
+    transform: scale(1.2);
 }
 
 button {
@@ -82,11 +99,6 @@ button:hover {
     transition: 0.3s ease;
 }
 
-.main {
-    display: flex;
-    justify-content: space-between;
-}
-
 .content {
     flex-direction: column;
     justify-content: space-between;
@@ -94,7 +106,6 @@ button:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
 }
-
 
 .content h3 {
     width: 100%;
@@ -117,71 +128,12 @@ button:hover {
     border-radius: 15px;
 }
 
-.container {
-    justify-content: center;
-    margin: auto;
-    flex-wrap: wrap;
-}
-
-ul {
-    list-style: none;
-}
-
-.container * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.footer-content {
-    flex-direction: column;
-    margin: 35px 300px 0 0;
-    color: white;
-    font-family: Arial, sans-serif;
-    font-size: 0.9rem;
-}
-
-.footer-content h3 {
-    color: lightblue;
-}
 
 
-.footer-copyright {
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    text-align: center;
-    background: darkred;
-    border-top: 2px solid #c7c7c7;
-    margin: 20px 0 0 0;
-}
 
-.footer-copyright p {
-    text-align: center;
-}
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
-}
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
 
 
 
